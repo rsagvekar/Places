@@ -57,7 +57,7 @@ const MapScreen = () => {
             handlePlaceSelect(details);
           }}
           query={{
-            key: '',
+            key: 'AIzaSyBg2UIaZE_0hhQAM6cib4XabNi73Y3ReRk',
             language: 'en',
           }}
           styles={{
