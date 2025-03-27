@@ -1,0 +1,4 @@
+export const UPDATEPLACES = 'UPDATEPLACES';
+export const TOGGLE_VISITED = 'TOGGLE_VISITED';
+export const SAVE_HISTORY = 'SAVE_HISTORY';
+
