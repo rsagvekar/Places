@@ -1,4 +1,4 @@
-import {SAVE_HISTORY, UPDATEPLACES} from '../Actions/ActionTypes';
+import {SAVE_HISTORY, SHOWHISTORY, UPDATEPLACES} from '../Actions/ActionTypes';
 
 const initialState = {
   data: [
@@ -19,6 +19,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzOxNBZfxkepdwskGgK0UdptpDN6Qh7E0Fw&s',
       ],
       isVisited: true,
+      latitude: 27.1751448,
+      longitude: 78.0421422,
       ratings: 4.8,
     },
     {
@@ -37,6 +39,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPktVEB6jCo4e3-RE0PsWj6L94AghQ6Ij34CL7m-gl5bpg-c_JPDMZ2TMSBM_C3NzsWZQ&usqp=CAU',
       ],
       isVisited: true,
+      latitude: 28.5244946,
+      longitude: 77.18551769999999,
       ratings: 4.6,
     },
     {
@@ -55,6 +59,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQep2cnI5FQAcFeQnbI0p1Xsu2tAyutjrGIXQ&s',
       ],
       isVisited: false,
+      latitude: 15.3350132,
+      longitude: 76.46002399999999,
       ratings: 4.7,
     },
     // More Historical Sites
@@ -74,6 +80,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR34mw0DDpa0PWY3dvLZ779R6v7gTd9lphnlA&s',
       ],
       isVisited: true,
+      latitude: 26.9124336,
+      longitude: 75.7872709,
       ratings: 4.5,
     },
     {
@@ -92,6 +100,8 @@ const initialState = {
         'https://upload.wikimedia.org/wikipedia/commons/4/47/Red_Fort_01.jpg',
       ],
       isVisited: false,
+      latitude: 28.6561592,
+      longitude: 77.2410203,
       ratings: 4.4,
     },
     {
@@ -110,6 +120,8 @@ const initialState = {
         'https://media.istockphoto.com/id/172124032/photo/mysore-palace-at-dusk.jpg?s=612x612&w=0&k=20&c=paO74C_dVsY14IbK0RNqs0TD-lSteQy-AW5CnQFEb_4=',
       ],
       isVisited: true,
+      latitude: 12.305163,
+      longitude: 76.65517489999999,
       ratings: 4.8,
     },
     {
@@ -128,6 +140,8 @@ const initialState = {
         'https://pohcdn.com/guide/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/Gateway-to-India_0.jpg',
       ],
       isVisited: false,
+      latitude: 18.9219841,
+      longitude: 72.8346543,
       ratings: 4.3,
     },
     {
@@ -146,6 +160,8 @@ const initialState = {
         'https://media.istockphoto.com/id/1149896146/photo/ancient-hindu-sun-temple-and-chariot-wheel-intricate-carvings-on-the-walls-in-konark-orissa.jpg?s=612x612&w=0&k=20&c=CZBTqAKcjtJ9k1Q01bwHlF9I2rFG7y6zdEi_z_NaOiA=',
       ],
       isVisited: false,
+      latitude: 19.8875953,
+      longitude: 86.0945364,
       ratings: 4.7,
     },
     {
@@ -164,6 +180,8 @@ const initialState = {
         'https://www.swantour.com/blogs/wp-content/uploads/2018/03/Temples-of-Khajuraho-1.jpg',
       ],
       isVisited: true,
+      latitude: 24.8530687,
+      longitude: 79.9217353,
       ratings: 4.5,
     },
     {
@@ -182,6 +200,8 @@ const initialState = {
         'https://server.ourglobaltrek.com/wp-content/uploads/2015/05/ajanta-cave-no-1-ajanta-india.jpg',
       ],
       isVisited: false,
+      latitude: 20.5513286,
+      longitude: 75.7069356,
       ratings: 4.8,
     },
     // Forests
@@ -201,6 +221,8 @@ const initialState = {
         'https://www.outdoorkeeda.com/jungle-safari/images/outdoorkeeda-sundarban-national-park-2.jpg',
       ],
       isVisited: false,
+      latitude: 21.8842354,
+      longitude: 88.88537649999999,
       ratings: 4.6,
     },
     {
@@ -219,6 +241,8 @@ const initialState = {
         'https://www.tarangiresort.com/assets/img/blog/TheCalloftheWild.jpg',
       ],
       isVisited: true,
+      latitude: 29.5521551,
+      longitude: 78.88321069999999,
       ratings: 4.7,
     },
     {
@@ -237,6 +261,8 @@ const initialState = {
         'https://vajiram-prod.s3.ap-south-1.amazonaws.com/Bandhavgarh_National_Park_97129d0357.jpg',
       ],
       isVisited: false,
+      latitude: 23.721515,
+      longitude: 81.01987840000001,
       ratings: 4.5,
     },
     // Beaches
@@ -256,6 +282,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuxtLqBiJbAGolqYuy1ta_QiQNbRCHVydaGQ&s',
       ],
       isVisited: true,
+      latitude: 15.3555072,
+      longitude: 73.8835486,
       ratings: 4.7,
     },
     {
@@ -274,6 +302,8 @@ const initialState = {
         'https://mediaim.expedia.com/destination/1/f0fe68eca8ce050afd37a4456f3ccc3e.jpg',
       ],
       isVisited: false,
+      latitude: 8.7355515,
+      longitude: 76.7031667,
       ratings: 4.4,
     },
     {
@@ -292,6 +322,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWSSX5IXGHxBOIZ8nnfS2DVO3prQK50vW5w&s',
       ],
       isVisited: false,
+      latitude: 9.600750599999998,
+      longitude: 76.2982585,
       ratings: 4.5,
     },
     // Cities
@@ -311,6 +343,8 @@ const initialState = {
         'https://udaipurtourism.co.in/images/places-to-visit/headers/udaipur-city-tour-packages-with-price-and-itinerary-sightseeing-places-tourism-entry-fee-timings-holidays-reviews-header.jpg',
       ],
       isVisited: true,
+      latitude: 24.585445,
+      longitude: 73.712479,
       ratings: 4.6,
     },
     {
@@ -329,6 +363,8 @@ const initialState = {
         'https://www.micato.com/wp-content/uploads/2018/09/varanasi-9.jpg',
       ],
       isVisited: false,
+      latitude: 25.3176452,
+      longitude: 82.9739144,
       ratings: 4.5,
     },
     {
@@ -347,6 +383,8 @@ const initialState = {
         'https://newsmeter.in/h-upload/2023/12/21/360664-whatsapp-image-2023-12-21-at-94400-am.webp',
       ],
       isVisited: false,
+      latitude: 17.406498,
+      longitude: 78.47724389999999,
       ratings: 4.4,
     },
     // Deserts
@@ -366,6 +404,8 @@ const initialState = {
         'https://img.veenaworld.com/wp-content/uploads/2018/06/1-cover-shutterstock_782705764-Camel-ride-on-the-sand-dunes-of-Thar-desert-Jaisalmer.jpg',
       ],
       isVisited: false,
+      latitude: 27.4694892,
+      longitude: 70.6216794,
       ratings: 4.3,
     },
     {
@@ -384,6 +424,8 @@ const initialState = {
         'https://utsav.gov.in/public/uploads/event_cover_image/event_13/1649078511645355156.jpg',
       ],
       isVisited: true,
+      latitude: 24.0454286,
+      longitude: 70.1455805,
       ratings: 4.5,
     },
     {
@@ -402,6 +444,8 @@ const initialState = {
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGtxbs_9Q67L3XM2TZX1WCzWj3Kn22UbZScQ&s',
       ],
       isVisited: false,
+      latitude: 23.1443682,
+      longitude: 71.210117,
       ratings: 4.4,
     },
   ],
@@ -473,6 +517,7 @@ const initialState = {
     },
   ],
   history: [],
+  showHistoryModal: false,
 };
 
 const CommonReducer = (state = initialState, action) => {
@@ -487,6 +532,12 @@ const CommonReducer = (state = initialState, action) => {
       return {
         ...state,
         history: [...state.history, ...action.payload],
+      };
+    }
+    case SHOWHISTORY: {
+      return {
+        ...state,
+        showHistoryModal: action.payload,
       };
     }
     default:

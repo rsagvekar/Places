@@ -38,13 +38,13 @@ const DetailScreen = () => {
   };
 
   const updateVisit = () => {
-    const updatedPlace = { ...currentPlace, isVisited: !currentPlace.isVisited };
+    const updatedPlace = {...currentPlace, isVisited: !currentPlace.isVisited};
     setCurrentPlace(updatedPlace);
-  
+
     const updatedData = reduxData.data.map(place =>
-      place.id === updatedPlace.id ? updatedPlace : place
+      place.id === updatedPlace.id ? updatedPlace : place,
     );
-    
+
     dispatch(updatePlaces(updatedData));
   };
 
@@ -53,12 +53,12 @@ const DetailScreen = () => {
       <ScrollView>
         <ImageBackground
           source={{uri: currentPlace?.images[selectedImageIndex]}}
-          style={{height: 400, width: width}}>
+          style={{height: height * 0.5, width: width}}>
           <LinearGradient
             colors={['transparent', 'rgba(0,0,0,0.7)']}
             style={{
               width: width,
-              height: 400,
+              height: height * 0.5,
               position: 'absolute',
             }}>
             <View
@@ -67,7 +67,7 @@ const DetailScreen = () => {
                 marginTop: Platform.OS == 'ios' ? 60 : 12,
                 paddingHorizontal: 20,
                 flexDirection: 'row',
-                alignItems: 'center',
+                alignItems: 'flex-start',
                 justifyContent: 'space-between',
                 padding: 10,
               }}>
@@ -86,18 +86,28 @@ const DetailScreen = () => {
                   style={{height: 48, width: 48}}
                 />
               </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => updateVisit()}
-                style={styles.iconWithShadow}>
-                <Image
-                  source={
-                    currentPlace?.isVisited
-                      ? require('../assets/explore.png')
-                      : require('../assets/unexplore.png')
-                  }
-                  style={{height: 30, width: 30}}
-                />
-              </TouchableOpacity>
+              <View>
+                <TouchableOpacity
+                  onPress={() => updateVisit()}
+                  style={styles.iconWithShadow}>
+                  <Image
+                    source={
+                      currentPlace?.isVisited
+                        ? require('../assets/explore.png')
+                        : require('../assets/unexplore.png')
+                    }
+                    style={{height: 30, width: 30}}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate('MapScreen', {data: item})}
+                  style={[styles.iconWithShadow, {marginTop: 4}]}>
+                  <Image
+                    source={require('../assets/maps.png')}
+                    style={{height: 30, width: 30}}
+                  />
+                </TouchableOpacity>
+              </View>
             </View>
             <View
               style={{

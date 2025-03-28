@@ -4,7 +4,6 @@ import SplashScreen from '../screens/SplashScreen';
 import DetailScreen from '../screens/DetailScreen';
 import ExploreScreen from '../screens/ExploreScreen';
 import MapScreen from '../screens/MapScreen';
-import HistoryScreen from '../screens/HistoryScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +18,6 @@ function MyStack() {
       <Stack.Screen name="DetailScreen" component={DetailScreen} />
       <Stack.Screen name="ExploreScreen" component={ExploreScreen} />
       <Stack.Screen name="MapScreen" component={MapScreen} />
-      <Stack.Screen name="HistoryScreen" component={HistoryScreen} />
     </Stack.Navigator>
   );
 }

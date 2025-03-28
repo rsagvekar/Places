@@ -59,14 +59,13 @@ const Dashboard = () => {
               borderRadius: 12,
               marginRight: 8,
               backgroundColor:
-                selectedIndex == index ? AppTheme.light.white : AppTheme.light.messageSearchContainer,
+                selectedIndex == index
+                  ? AppTheme.light.white
+                  : AppTheme.light.messageSearchContainer,
               alignItems: 'center',
               justifyContent: 'center',
             }}>
-            <Image
-              source={item.icon}
-              style={{height: 36, width: 36}}
-            />
+            <Image source={item.icon} style={{height: 36, width: 36}} />
           </View>
           <Text
             style={{
@@ -198,51 +197,34 @@ const Dashboard = () => {
             flexDirection: 'row',
             alignItems: 'center',
           }}>
-          <View
-            style={{
-              width: '80%',
-              // marginLeft: 20,
-              borderRadius: 12,
-              backgroundColor: AppTheme.light.white,
-              flexDirection: 'row',
-              alignContent: 'center',
-              justifyContent: 'center',
-              paddingHorizontal: 18,
-            }}>
-            <Image
-              source={require('../assets/search.png')}
-              style={{height: 24, width: 24, alignSelf: 'center'}}
-            />
-            <TextInput
-              style={{
-                flex: 1,
-                paddingLeft: 12,
-                height: 60,
-              }}
-            />
-          </View>
-
           <LinearGradient
             colors={['#ff4408', '#fc551f', '#fc6636']}
             style={{
-              // height: 60,
-              marginLeft: 12,
+              width: '80%',
               borderRadius: 12,
               alignItems: 'center',
               justifyContent: 'center',
+              flexDirection: 'row',
             }}>
             <TouchableOpacity
-            onPress={() => {navigation.navigate('MapScreen')}}
+              onPress={() => {
+                navigation.navigate('MapScreen', {data: {}});
+              }}
               style={{
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: 60,
+                // width: 60,
                 height: 60,
                 borderRadius: 12,
+                flexDirection: 'row',
               }}>
+              <Text style={{fontSize: 22, color: '#fff', fontWeight: '700'}}>
+                Explore More!
+              </Text>
+
               <Image
-                source={require('../assets/filter.png')}
-                style={{height: 30, width: 30}}
+                source={require('../assets/maps.png')}
+                style={{marginLeft: 12, height: 30, width: 30}}
               />
             </TouchableOpacity>
           </LinearGradient>

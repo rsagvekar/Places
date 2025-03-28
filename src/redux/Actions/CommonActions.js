@@ -2,6 +2,7 @@ import {
   UPDATEPLACES,
   TOGGLE_VISITED,
   SAVE_HISTORY,
+  SHOWHISTORY,
 } from './ActionTypes';
 
 import {_api_key} from '../../api/api';
@@ -21,5 +22,11 @@ export const toggleVisited = id => ({
 export const saveHistory = data => {
   return dispatch => {
     dispatch({type: SAVE_HISTORY, payload: data});
+  };
+};
+
+export const showHistory = data => {
+  return dispatch => {
+    dispatch({type: SHOWHISTORY, payload: data});
   };
 };
